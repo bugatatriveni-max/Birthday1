@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Kavya 💙</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            overflow: hidden;
+            font-family: "Segoe UI", sans-serif;
+
+            background:
+                radial-gradient(circle at 50% 40%,
+                    #123b78 0%,
+                    #071d45 35%,
+                    #020817 75%,
+                    #00030a 100%);
+
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* BLUE GLOWING LIGHTS */
+
+        .light {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #63c7ff;
+            border-radius: 50%;
+
+            box-shadow:
+                0 0 10px #63c7ff,
+                0 0 25px #1da1ff,
+                0 0 45px #008cff;
+
+            animation: twinkle 2s infinite alternate;
+        }
+
+        .l1 { top: 8%; left: 10%; }
+        .l2 { top: 15%; left: 25%; animation-delay: .4s; }
+        .l3 { top: 10%; left: 45%; animation-delay: .8s; }
+        .l4 { top: 18%; left: 70%; animation-delay: .3s; }
+        .l5 { top: 7%; right: 8%; animation-delay: 1s; }
+
+        .l6 { top: 35%; left: 5%; animation-delay: .6s; }
+        .l7 { top: 45%; right: 8%; animation-delay: 1.2s; }
+        .l8 { bottom: 20%; left: 10%; animation-delay: .2s; }
+        .l9 { bottom: 12%; left: 30%; animation-delay: .7s; }
+        .l10 { bottom: 18%; right: 25%; animation-delay: 1.1s; }
+        .l11 { bottom: 10%; right: 8%; animation-delay: .5s; }
+
+        @keyframes twinkle {
+            from {
+                opacity: .3;
+                transform: scale(.7);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1.5);
+            }
+        }
+
+        /* MAIN CARD */
+
+        .birthday-card {
+            position: relative;
+            z-index: 10;
+
+            width: 90%;
+            max-width: 800px;
+            min-height: 85vh;
+
+            padding: 40px 25px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            background: rgba(5, 22, 55, .72);
+
+            border: 1px solid rgba(95, 190, 255, .4);
+
+            border-radius: 30px;
+
+            box-shadow:
+                0 0 30px rgba(0, 150, 255, .25),
+                inset 0 0 40px rgba(0, 140, 255, .08);
+
+            backdrop-filter: blur(8px);
+        }
+
+        .small-title {
+            color: #8bd8ff;
+            font-size: 1.2rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            color: #ffffff;
+
+            text-shadow:
+                0 0 10px #48bfff,
+                0 0 25px #168cff;
+
+            margin-bottom: 5px;
+        }
+
+        .name {
+            font-size: 3.5rem;
+            font-weight: bold;
+
+            color: #65c9ff;
+
+            text-shadow:
+                0 0 10px #42bfff,
+                0 0 30px #007bff;
+
+            margin-bottom: 25px;
+        }
+
+        /* CAKE */
+
+        .cake {
+            position: relative;
+            width: 260px;
+            height: 150px;
+            margin: 20px auto 30px;
+        }
+
+        .cake-top {
+            position: absolute;
+            bottom: 70px;
+            left: 20px;
+
+            width: 220px;
+            height: 45px;
+
+            background: linear-gradient(
+                #bde9ff,
+                #63bfff
+            );
+
+            border-radius: 50%;
+
+            box-shadow:
+                0 0 20px #38b9ff;
+        }
+
+        .cake-body {
+            position: absolute;
+            bottom: 0;
+            left: 30px;
+
+            width: 200px;
+            height: 85px;
+
+            background: linear-gradient(
+                #168eea,
+                #0754a5
+            );
+
+            border-radius: 0 0 20px 20px;
+
+            box-shadow:
+                inset 0 -15px 20px rgba(0,0,0,.25),
+                0 0 25px rgba(0,145,255,.6);
+        }
+
+        .cream {
+            position: absolute;
+            bottom: 65px;
+            left: 35px;
+
+            width: 190px;
+            height: 20px;
+
+            background: #e8f8ff;
+
+            border-radius: 50%;
+
+            box-shadow: 0 0 10px #fff;
+        }
+
+        /* CANDLES */
+
+        .candle {
+            position: absolute;
+            bottom: 105px;
+
+            width: 12px;
+            height: 55px;
+
+            background: linear-gradient(
+                90deg,
+                #ffffff,
+                #6bcaff,
+                #ffffff
+            );
+
+            border-radius: 4px;
+        }
+
+        .c1 {
+            left: 65px;
+        }
+
+        .c2 {
+            left: 125px;
+        }
+
+        .c3 {
+            left: 185px;
+        }
+
+        /* FLAMES */
+
+        .flame {
+            position: absolute;
+
+            width: 18px;
+            height: 28px;
+
+            background: #fff;
+            border-radius: 50% 50% 50% 0;
+
+            transform: rotate(-45deg);
+
+            box-shadow:
+                0 0 10px #fff,
+                0 0 25px #ffd84d,
+                0 0 45px #ff9d00;
+
+            animation: flame 0.8s infinite alternate;
+        }
+
+        .f1 {
+            bottom: 157px;
+            left: 62px;
+        }
+
+        .f2 {
+            bottom: 157px;
+            left: 122px;
+        }
+
+        .f3 {
+            bottom: 157px;
+            left: 182px;
+        }
+
+        @keyframes flame {
+            from {
+                transform: rotate(-45deg) scale(1);
+            }
+
+            to {
+                transform: rotate(-40deg) scale(1.2);
+            }
+        }
+
+        /* MESSAGE */
+
+        .message {
+            max-width: 650px;
+
+            font-size: 1.2rem;
+            line-height: 1.8;
+
+            color: #dff5ff;
+        }
+
+        .message span {
+            color: #69caff;
+            font-weight: bold;
+        }
+
+        .wish {
+            margin-top: 20px;
+
+            font-size: 1.4rem;
+            color: #ffffff;
+
+            text-shadow: 0 0 10px #249fff;
+        }
+
+        .hearts {
+            margin-top: 20px;
+
+            font-size: 2rem;
+
+            animation: floating 2s infinite ease-in-out;
+        }
+
+        @keyframes floating {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            .birthday-card {
+                min-height: 90vh;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .name {
+                font-size: 2.5rem;
+            }
+
+            .message {
+                font-size: 1rem;
+            }
+
+            .cake {
+                transform: scale(.85);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- BLUE LIGHTS -->
+
+    <div class="light l1"></div>
+    <div class="light l2"></div>
+    <div class="light l3"></div>
+    <div class="light l4"></div>
+    <div class="light l5"></div>
+    <div class="light l6"></div>
+    <div class="light l7"></div>
+    <div class="light l8"></div>
+    <div class="light l9"></div>
+    <div class="light l10"></div>
+    <div class="light l11"></div>
+
+
+    <!-- BIRTHDAY CARD -->
+
+    <div class="birthday-card">
+
+        <div class="small-title">
+            ✨ A Special Day ✨
+        </div>
+
+        <h1>
+            Happy Birthday
+        </h1>
+
+        <div class="name">
+            Kavya 💙
+        </div>
+
+
+        <!-- CAKE -->
+
+        <div class="cake">
+
+            <div class="flame f1"></div>
+            <div class="flame f2"></div>
+            <div class="flame f3"></div>
+
+            <div class="candle c1"></div>
+            <div class="candle c2"></div>
+            <div class="candle c3"></div>
+
+            <div class="cream"></div>
+
+            <div class="cake-top"></div>
+
+            <div class="cake-body"></div>
+
+        </div>
+
+
+        <!-- MESSAGE -->
+
+        <div class="message">
+
+            <p>
+                To my amazing best friend
+                <span>Kavya</span> 💙
+            </p>
+
+            <p>
+                Wishing you a birthday filled with
+                happiness, beautiful memories,
+                endless smiles and everything
+                you've been wishing for. ✨
+            </p>
+
+            <p>
+                May this new year of your life
+                shine as brightly as these lights
+                and bring you countless beautiful
+                moments. 🌟
+            </p>
+
+        </div>
+
+
+        <div class="wish">
+            🎂 May all your dreams come true! 🎂
+        </div>
+
+        <div class="hearts">
+            💙 ✨ 🕯️ ✨ 💙
+        </div>
+
+    </div>
+
+</body>
+</html>
